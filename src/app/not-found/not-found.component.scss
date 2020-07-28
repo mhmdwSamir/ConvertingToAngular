@@ -1,60 +1,47 @@
 .bigText {
-  font-size: 25em;
-  margin-bottom: 0;
-}
-.parent {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: -200;
-}
-.child {
-  z-index: 250;
-}
-.child:before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #d2b356;
-}
-.child::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  //   background-color: gray;
-}
-.conatin {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 25;
-}
-.c-1,
-.c-2 {
-  z-index: 2;
+  font-size: 15em;
   text-align: center;
+  margin: 0;
+  position: relative;
 }
-.c-1:before {
+
+.wrapper {
+  position: relative;
+}
+.wrapper:before {
   position: absolute;
   content: "";
-  top: 0;
-  left: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
+  top: 0;
+  right: 50%;
   background-color: #d2b356;
 }
-.c-1::after {
+.wrapper:after {
   position: absolute;
   content: "";
-  top: 0;
-  right: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  background-color: red;
+  top: 0;
+  left: 50%;
+}
+
+.last {
+  color: #d2b356;
+}
+.zero {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.zero:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 25%;
+  left: 25%;
+  border-radius: 50%;
 }
