@@ -7,7 +7,7 @@
       </h2>
     </div>
 
-    <div
+    <!-- <div
       class="pricing-block col-3 wow fadeInUp"
       data-wow-delay="0.4s"
       *ngFor="
@@ -15,24 +15,45 @@
           | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize
       "
     >
+    </div> -->
+    <div
+      class="pricing-block col-3 wow fadeInUp"
+      data-wow-delay="0.4s"
+      *ngFor="let blog of pages"
+    >
       <app-plog [plogData]="blog"></app-plog>
     </div>
   </div>
   <!-- <app-pagenation></app-pagenation> -->
-  <ngb-pagination
+
+  <ul>
+    <li>
+      <a (click)="setPage(1)">First</a>
+    </li>
+    <li>
+      <a (click)="setPage(pager.currentPage - 1)">previous</a>
+    </li>
+    <li *ngFor="let page of pager.pages">
+      <a (click)="setPage(page)">{{ page }}</a>
+    </li>
+    <li>
+      <a (click)="setPage(pager.currentPage + 1)">Next</a>
+    </li>
+    <li>
+      <a (click)="setPage(pager.totalPages)">Last</a>
+    </li>
+  </ul>
+  <!-- <ngb-pagination
     class="paginator"
     [collectionSize]="blogsData.blogs.length * 10"
     [(page)]="page"
   >
     <ng-template ngbPaginationPrevious>Prev</ng-template>
     <ng-template ngbPaginationNext>Next</ng-template>
-  </ngb-pagination>
+  </ngb-pagination> -->
 </section>
 
-<!-- <div
-class="pricing-block col-3 wow fadeInUp"
-data-wow-delay="0.4s"
-*ngFor="let blog of blogsData.blogs"
->
-<app-plog [plogData]="blog"></app-plog>
-</div> -->
+<!--  -->
+
+{{ pager.pages }}
+{{ pager.totalPages }}

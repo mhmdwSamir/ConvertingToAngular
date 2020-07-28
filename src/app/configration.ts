@@ -255,6 +255,47 @@ export const configration = {
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor',
         buttonText: 'ReadMore...',
       },
+      {
+        blogName: 'the nine Article',
+        blogDate: 'The standard version',
+        blogImg: '../../assets/images/gallery-images/gallery-image-2.jpg',
+        desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor',
+        buttonText: 'ReadMore...',
+      },
+      {
+        blogName: 'the ten Article',
+        blogDate: 'The standard version',
+        blogImg: '../../assets/images/gallery-images/gallery-image-2.jpg',
+        desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor',
+        buttonText: 'ReadMore...',
+      },
+      {
+        blogName: 'the eleven Article',
+        blogDate: 'The standard version',
+        blogImg: '../../assets/images/gallery-images/gallery-image-2.jpg',
+        desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor',
+        buttonText: 'ReadMore...',
+      },
+      {
+        blogName: 'the twelve Article',
+        blogDate: 'The standard version',
+        blogImg: '../../assets/images/gallery-images/gallery-image-2.jpg',
+        desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor',
+        buttonText: 'ReadMore...',
+      },
+
+      {
+        blogName: 'the thirten Article',
+        blogDate: 'The standard version',
+        blogImg: '../../assets/images/gallery-images/gallery-image-2.jpg',
+        desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor',
+        buttonText: 'ReadMore...',
+      },
     ],
   },
   footer: {
