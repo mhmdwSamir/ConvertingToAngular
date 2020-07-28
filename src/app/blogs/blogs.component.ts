@@ -8,7 +8,6 @@ import { PagerService } from '../Services/pager.service';
 })
 export class BlogsComponent implements OnInit {
   blogsData;
-  // page = 1;
   pageSize = 3;
   allItems: any[];
   pages: any[];
@@ -40,6 +39,5 @@ export class BlogsComponent implements OnInit {
       this.pager.startIndex,
       this.pager.endIndex + 1
     );
-    console.log(this.pager);
   }
 }
