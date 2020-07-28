@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { configration } from './configration';
+import { configration } from '../configration';
 @Injectable({
   providedIn: 'root',
 })

@@ -10,8 +10,4 @@ export class NavigationComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  // getActiveTab(tabName: string) {
-  //   this.activetab = tabName;
-  // }
 }

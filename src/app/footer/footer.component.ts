@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from '../config.service';
+import { ConfigService } from '../Services/config.service';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',

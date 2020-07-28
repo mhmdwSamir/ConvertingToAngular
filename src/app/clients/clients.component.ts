@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from '../config.service';
+import { ConfigService } from '../Services/config.service';
 @Component({
   selector: 'app-clients',
   templateUrl: './clients.component.html',
