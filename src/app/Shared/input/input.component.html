@@ -1,0 +1,37 @@
+<div>
+  <label>{{ label }}</label>
+  <input
+    *ngIf="controlType === 'input'"
+    [placeholder]="placeholder"
+    [type]="type"
+    [formControl]="control"
+  />
+  <!-- -----  For the Futeure  ----- -->
+  <textarea
+    *ngIf="controlType === 'textarea'"
+    [formControl]="control"
+    [placeholder]="placeholder"
+  >
+  </textarea>
+
+  <ng-container *ngIf="control.errors && control.touched && control.dirty">
+    <p *ngIf="control.errors.required" class="styleError">
+      *{{ label }} is Required
+    </p>
+    <p *ngIf="control.errors.minlength as minLengthError" class="styleError">
+      *{{ label }} must be at least {{ minLengthError.requiredLength }} char but
+      you enterd {{ minLengthError.actualLength }} char
+    </p>
+    <p *ngIf="control.errors.maxlength as maxLengthError" class="styleError">
+      *{{ label }} must be at most {{ maxLengthError.requiredLength }} char but
+      you enterd {{ maxLengthError.actualLength }} char
+    </p>
+    <p *ngIf="control.errors.email" class="styleError">
+      *Invalid Email
+    </p>
+
+    <p *ngIf="control.errors.pattern" class="styleError">
+      *INVALID FORMATE... TRY AGAIN
+    </p>
+  </ng-container>
+</div>

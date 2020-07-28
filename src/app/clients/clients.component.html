@@ -1,0 +1,28 @@
+<!--Clients-->
+<section id="clients" class="scrollto clearfix">
+  <div class="row clearfix">
+    <div class="col-3">
+      <div class="section-heading">
+        <h3>{{ clientsData.tagline }}</h3>
+        <h2 class="section-title">{{ clientsData.title }}</h2>
+        <p class="section-subtitle">
+          {{ clientsData.desc }}
+        </p>
+      </div>
+    </div>
+
+    <div class="col-2-3">
+      <a
+        routerLink=""
+        class="col-3"
+        *ngFor="let customer of clientsData.customers"
+      >
+        <img [src]="customer.img" alt="Company" />
+        <div class="client-overlay">
+          <span>{{ customer.companyName }}</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<!--End of Clients-->

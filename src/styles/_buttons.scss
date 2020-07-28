@@ -1,0 +1,36 @@
+/* Button Text */
+.button,
+input[type="submit"] {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+  color: #111;
+}
+/* Button Color */
+.button,
+input[type="submit"] {
+  border-color: #111;
+}
+/* Button Hover Color */
+.button:hover,
+input[type="submit"]:hover {
+  border-color: $main-color;
+  color: $main-color;
+}
+/* ----------Banner Buttons---------- */
+/* Button Text */
+#banner .button {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 16px;
+  color: #111;
+}
+/* Button Color */
+
+#banner .button {
+  border-color: #111;
+}
+/* Button Hover Color */
+#banner .button:hover {
+  color: $main-color;
+  border-color: $main-color;
+}

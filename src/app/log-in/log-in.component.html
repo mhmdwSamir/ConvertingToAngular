@@ -1,0 +1,42 @@
+<section class="secondary-color text-center scrollto clearfix">
+  <div class="row clearfix">
+    <div class="section-heading">
+      <h2 class="section-title">
+        Log In
+      </h2>
+      <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+        <app-input
+          placeholder="Name"
+          label="UserName"
+          type="text"
+          [control]="loginForm.get('userName')"
+          [controlType]="'input'"
+        >
+        </app-input>
+        <app-input
+          placeholder="Password"
+          label="Password"
+          type="password"
+          [control]="loginForm.get('password')"
+          [controlType]="'input'"
+        >
+        </app-input>
+        <app-input
+          placeholder="Email"
+          label="Email"
+          type="text"
+          [control]="loginForm.get('email')"
+          [controlType]="'textarea'"
+        >
+        </app-input>
+
+        <div class="form-buttons">
+          <button class="button" type="submit">login</button>
+          <button class="button" type="button" (click)="loginForm.reset()">
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

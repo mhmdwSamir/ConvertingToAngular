@@ -1,0 +1,40 @@
+<section id="pricing" class="secondary-color text-center scrollto clearfix">
+  <div class="row clearfix">
+    <div class="section-heading">
+      <h3>{{ blogsData.tagline }}</h3>
+      <h2 class="section-title">
+        {{ blogsData.title }}
+      </h2>
+    </div>
+
+    <div
+      class="pricing-block col-3 wow fadeInUp"
+      data-wow-delay="0.4s"
+      *ngFor="
+        let blog of blogsData.blogs
+          | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize
+      "
+    >
+      <app-plog [plogData]="blog"></app-plog>
+    </div>
+  </div>
+  <!-- <app-pagenation></app-pagenation> -->
+  <ngb-pagination
+    class="paginator"
+    [collectionSize]="blogsData.blogs.length * 10"
+    [(page)]="page"
+  >
+    <ng-template ngbPaginationPrevious>Prev</ng-template>
+    <ng-template ngbPaginationNext>Next</ng-template>
+  </ngb-pagination>
+</section>
+
+{{ blogsData.blogs.length * 10 }}
+
+<!-- <div
+class="pricing-block col-3 wow fadeInUp"
+data-wow-delay="0.4s"
+*ngFor="let blog of blogsData.blogs"
+>
+<app-plog [plogData]="blog"></app-plog>
+</div> -->

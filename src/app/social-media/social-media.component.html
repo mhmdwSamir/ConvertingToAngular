@@ -1,0 +1,9 @@
+<aside>
+  <ul class="social-icons">
+    <li *ngFor="let link of socialData.social_icons">
+      <a target="_blank" [title]="link.title" [href]="link.href">
+        <i [class]="link.iconClass"></i><span>{{ link.title }}</span>
+      </a>
+    </li>
+  </ul>
+</aside>

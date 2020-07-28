@@ -1,0 +1,20 @@
+$main-color: #d2b356;
+#banner-content {
+  background: url(../../assets/images/banner-images/banner-image-1.jpg)
+    no-repeat center top/cover;
+  .row {
+    padding-top: 170px;
+    padding-bottom: 100px;
+  }
+  h1 {
+    padding-top: 5%;
+  }
+  &:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin-top: 30px;
+    background-color: $main-color;
+  }
+}
