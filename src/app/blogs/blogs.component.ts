@@ -21,8 +21,6 @@ export class BlogsComponent implements OnInit {
     this.blogsData = this.getBlogsData();
     this.allItems = this.blogsData.blogs;
     this.setPage(1);
-    console.log(this.blogsData.blogs.length);
-    console.log(this.pager.pages);
   }
   getBlogsData() {
     return this._configService.getConfig().blogs;

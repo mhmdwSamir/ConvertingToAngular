@@ -24,25 +24,8 @@
       <app-plog [plogData]="blog"></app-plog>
     </div>
   </div>
-  <!-- <app-pagenation></app-pagenation> -->
+  <app-pagenation [pager]="pager" (setPage)="setPage($event)"></app-pagenation>
 
-  <ul>
-    <li>
-      <a (click)="setPage(1)">First</a>
-    </li>
-    <li>
-      <a (click)="setPage(pager.currentPage - 1)">previous</a>
-    </li>
-    <li *ngFor="let page of pager.pages">
-      <a (click)="setPage(page)">{{ page }}</a>
-    </li>
-    <li>
-      <a (click)="setPage(pager.currentPage + 1)">Next</a>
-    </li>
-    <li>
-      <a (click)="setPage(pager.totalpages)">Last</a>
-    </li>
-  </ul>
   <!-- <ngb-pagination
     class="paginator"
     [collectionSize]="blogsData.blogs.length * 10"
@@ -52,8 +35,3 @@
     <ng-template ngbPaginationNext>Next</ng-template>
   </ngb-pagination> -->
 </section>
-
-<!--  -->
-
-{{ pager.pages }}
-{{ pager.totalPages }}
