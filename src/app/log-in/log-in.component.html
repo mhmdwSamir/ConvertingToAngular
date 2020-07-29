@@ -6,33 +6,48 @@
       </h2>
       <form [formGroup]="loginForm" (ngSubmit)="logIn()">
         <app-input
-          placeholder="Name"
-          label="UserName"
+          placeholder="Email"
           type="text"
-          [control]="loginForm.get('userName')"
+          [control]="loginForm.get('email')"
           [controlType]="'input'"
         >
         </app-input>
         <app-input
+          class="password"
           placeholder="Password"
-          label="Password"
-          type="password"
+          [type]="fieldTextType ? 'text' : 'password'"
           [control]="loginForm.get('password')"
           [controlType]="'input'"
         >
         </app-input>
-        <app-input
-          placeholder="Email"
-          label="Email"
-          type="text"
-          [control]="loginForm.get('email')"
-          [controlType]="'textarea'"
-        >
-        </app-input>
-
+        <!-- <input
+          type="checkbox"
+          (click)="this.feildTextType = !this.feildTextType"
+        /> -->
+        <p>
+          Show/Hide
+          <i
+            class="showPass fa fa-lg"
+            [ngClass]="{
+              'fa-eye-slash': !fieldTextType,
+              'fa-eye': fieldTextType
+            }"
+            (click)="togglePassVisibility()"
+          ></i>
+        </p>
         <div class="form-buttons">
-          <button class="button" type="submit">login</button>
-          <button class="button" type="button" (click)="loginForm.reset()">
+          <button
+            class="button loginButton"
+            type="submit"
+            [class.disabled]="loginForm.invalid"
+          >
+            login
+          </button>
+          <button
+            class="button resetButton"
+            type="button"
+            (click)="loginForm.reset()"
+          >
             Reset
           </button>
         </div>

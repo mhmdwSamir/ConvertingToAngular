@@ -13,18 +13,20 @@
     [placeholder]="placeholder"
   >
   </textarea>
-
+  <!------------------- errors --------------------->
   <ng-container *ngIf="control.errors && control.touched && control.dirty">
     <p *ngIf="control.errors.required" class="styleError">
-      *{{ label }} is Required
+      *{{ placeholder }} is Required
     </p>
     <p *ngIf="control.errors.minlength as minLengthError" class="styleError">
-      *{{ label }} must be at least {{ minLengthError.requiredLength }} char but
-      you enterd {{ minLengthError.actualLength }} char
+      *{{ placeholder }} must be at least
+      {{ minLengthError.requiredLength }} char but you enterd
+      {{ minLengthError.actualLength }} char
     </p>
     <p *ngIf="control.errors.maxlength as maxLengthError" class="styleError">
-      *{{ label }} must be at most {{ maxLengthError.requiredLength }} char but
-      you enterd {{ maxLengthError.actualLength }} char
+      *{{ placeholder }} must be at most
+      {{ maxLengthError.requiredLength }} char but you enterd
+      {{ maxLengthError.actualLength }} char
     </p>
     <p *ngIf="control.errors.email" class="styleError">
       *Invalid Email

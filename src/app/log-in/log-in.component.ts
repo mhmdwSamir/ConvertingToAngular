@@ -6,23 +6,24 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./log-in.component.scss'],
 })
 export class LogInComponent implements OnInit {
+  fieldTextType: boolean = false;
+  togglePassVisibility() {
+    this.fieldTextType = !this.fieldTextType;
+  }
   loginForm = new FormGroup({
-    userName: new FormControl(null, [
-      Validators.required,
-      Validators.pattern(/^[a-zA-Z]/),
-      Validators.minLength(5),
-      Validators.maxLength(15),
-    ]),
     email: new FormControl(null, [Validators.required, Validators.email]),
     password: new FormControl(null, [
       Validators.required,
       Validators.minLength(6),
-      Validators.minLength(15),
+      Validators.maxLength(15),
     ]),
   });
   constructor() {}
   ngOnInit(): void {}
   logIn() {
+    if (this.loginForm.invalid) {
+      return;
+    }
     console.log(this.loginForm.value);
   }
 }

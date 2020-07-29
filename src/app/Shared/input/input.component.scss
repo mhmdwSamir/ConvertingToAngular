@@ -1,7 +1,10 @@
 input {
   width: 450px;
+  font-size: 20px;
 }
-
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
 .styleError {
   color: red;
 }

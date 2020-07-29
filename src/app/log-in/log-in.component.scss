@@ -1,0 +1,17 @@
+.loginButton {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.resetButton {
+  cursor: pointer;
+  &:hover {
+    border-color: red;
+  }
+}
+.disabled {
+  cursor: none;
+}
+.showPass {
+  cursor: pointer;
+  text-align: left !important;
+}
