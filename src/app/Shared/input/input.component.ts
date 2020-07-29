@@ -11,6 +11,8 @@ export class InputComponent implements OnInit {
   @Input() control: FormControl;
   @Input() controlType: string;
   @Input() label: string;
+  @Input() rows: string;
+  @Input() cols: string;
 
   constructor() {}
 

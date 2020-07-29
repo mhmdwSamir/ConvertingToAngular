@@ -24,6 +24,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { InputComponent } from './Shared/input/input.component';
 import { PreLoaderComponent } from './pre-loader/pre-loader.component';
 import { NgbPaginationModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
