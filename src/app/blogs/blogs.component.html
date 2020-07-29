@@ -24,9 +24,15 @@
       <app-plog [plogData]="blog"></app-plog>
     </div>
   </div>
-  <app-pagenation [pager]="pager" (setPage)="setPage($event)"></app-pagenation>
+  <div class="row clearfix">
+    <app-pagenation
+      [pager]="pager"
+      (setPage)="setPage($event)"
+    ></app-pagenation>
+  </div>
+</section>
 
-  <!-- <ngb-pagination
+<!-- <ngb-pagination
     class="paginator"
     [collectionSize]="blogsData.blogs.length * 10"
     [(page)]="page"
@@ -34,4 +40,3 @@
     <ng-template ngbPaginationPrevious>Prev</ng-template>
     <ng-template ngbPaginationNext>Next</ng-template>
   </ngb-pagination> -->
-</section>

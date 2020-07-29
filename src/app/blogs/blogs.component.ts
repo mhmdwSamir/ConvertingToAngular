@@ -32,6 +32,7 @@ export class BlogsComponent implements OnInit {
       pageNumber,
       this.pageSize
     );
+    console.log(this.pager.pages);
     // current page blogs
     this.pages = this.allItems.slice(
       this.pager.startIndex,

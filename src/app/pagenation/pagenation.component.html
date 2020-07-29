@@ -1,17 +1,20 @@
 <ul *ngIf="pager">
-  <li>
+  <li [class.disabled]="pager.currentPage == 1">
     <a (click)="setCurrentPage(1)">First</a>
   </li>
-  <li>
+  <li [class.disabled]="pager.currentPage == 1">
     <a (click)="setCurrentPage(pager.currentPage - 1)">previous</a>
   </li>
-  <li *ngFor="let page of pager.pages">
+  <li
+    *ngFor="let page of pager.pages"
+    [class.active]="pager.currentPage == page"
+  >
     <a (click)="setCurrentPage(page)">{{ page }}</a>
   </li>
-  <li>
+  <li [class.disabled]="pager.currentPage == pager.totalpages">
     <a (click)="setCurrentPage(pager.currentPage + 1)">Next</a>
   </li>
-  <li>
+  <li [class.disabled]="pager.currentPage == pager.totalpages">
     <a (click)="setCurrentPage(pager.totalpages)">Last</a>
   </li>
 </ul>
