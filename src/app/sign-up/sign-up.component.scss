@@ -1,3 +1,16 @@
 .styleError {
   color: red;
 }
+.loginButton {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.resetButton {
+  cursor: pointer;
+  &:hover {
+    border-color: red;
+  }
+}
+.disabled {
+  cursor: none;
+}

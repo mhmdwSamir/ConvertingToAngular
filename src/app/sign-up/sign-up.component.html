@@ -8,7 +8,6 @@
       <form [formGroup]="signUpForm">
         <app-input
           placeholder="Name"
-          label="UserName"
           type="text"
           [control]="signUpForm.get('username')"
           [controlType]="'input'"
@@ -16,7 +15,6 @@
         </app-input>
         <app-input
           placeholder="email"
-          label="Email"
           type="'email'"
           [control]="signUpForm.get('email')"
           [controlType]="'input'"
@@ -24,7 +22,6 @@
         </app-input>
         <app-input
           placeholder="password"
-          label="Password"
           type="password"
           [control]="signUpForm.get('password')"
           [controlType]="'input'"
@@ -32,7 +29,6 @@
         </app-input>
         <app-input
           placeholder="repeat password"
-          label="Confirm Password"
           type="password"
           [control]="signUpForm.get('confirmPassword')"
           [controlType]="'input'"
@@ -52,8 +48,18 @@
           </p>
         </ng-container>
         <div class="buttons">
-          <button class="button" type="submit">login</button>
-          <button class="button" type="button" (click)="signUpForm.reset()">
+          <button
+            [class.disabled]="signUpForm.invalid"
+            class="button loginButton"
+            type="submit"
+          >
+            login
+          </button>
+          <button
+            class="button resetButton"
+            type="button"
+            (click)="signUpForm.reset()"
+          >
             Reset
           </button>
         </div>
@@ -61,5 +67,3 @@
     </div>
   </div>
 </section>
-
-{{ signUpForm.errors | json }}
