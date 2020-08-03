@@ -12,12 +12,13 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { GuardService } from './Services/guard.service';
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: HeaderComponent },
   { path: 'About', component: IntroComponent },
   { path: 'Testimonials', component: TestimonialsComponent },
-  { path: 'Blogs', component: BlogsComponent },
+  { path: 'Blogs', component: BlogsComponent, canActivate: [GuardService] },
   { path: 'Gallery', component: GallaryComponent },
   { path: 'Clients', component: ClientsComponent },
   { path: 'Pricing', component: PricingComponent },
